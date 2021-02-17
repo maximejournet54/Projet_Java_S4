@@ -1,38 +1,47 @@
 package modele;
-
+	
 import java.rmi.*;
-import java.util.Scanner;
 
-public class Client {
-    public static void main(String[] args) {
+import java.net.URL;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.Parent;
+
+
+public class Client extends Application {
+		
+    //methode qui ouvre l'accueil
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			URL fxmlURL=getClass().getResource("/vue/Accueil.fxml");
+			FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
+			Parent root = fxmlLoader.load();
+			
+			Scene scene = new Scene(root, 900, 700);
+			//scene.getStylesheets().add(getClass().getResource("/vue/Accueil.css").toExternalForm());
+			
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Accueil");
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
         try {
             String hote="127.0.0.1";
-            int port = Integer.parseInt("6005");
+            int port = Integer.parseInt("6001");
             // lookup est une methode de Naming qui permet de rechercher un objet dans le service de nommage
-            JeuInterface obj = (JeuInterface) Naming.lookup ("rmi://"+ hote +":"+port + "/jeu");
-            System.out.println("Client connecté.\n");
-            /*
-            Scanner sc=new Scanner(System.in);
-            System.out.println("Choisir le jeu à lancer: 1= pendu \t 2= alumettes\n 3= tic tac toe\n");
-            int choix = sc.nextInt();
-            if(choix==1){
-                System.out.println("Vous avez choisi le jeu du pendu.\n");
-            }
-            else if (choix==2){
-                System.out.println("Vous avez choisi le jeu des alumettes\n");
-            }
-            else if (choix==3){
-                System.out.println("Vous avez choisi le jeu Tic-tac-toe.\n");
-            }
-            else{
-                System.out.println("Choix incorrect, sortie de l'application\n");
-                System.exit(1);
-            }
-            sc.close();
-            */
-            //partie entre commentaires a mettre dans interface graphique de la page d accueil de l application
+			MethodesInterface obj = (MethodesInterface) Naming.lookup ("rmi://"+ hote +":"+port + "/jeu");
+            System.out.println("Client connecte.\nOuverture de l'application.\n");
+            launch(args);
         } catch (Exception e) {
-            System.out.println ("Erreur du client: " + e);
+            System.out.println ("Pb avec le client:\n" + e);
         }
-    }
+	}
 }
