@@ -17,17 +17,22 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
-public class AccueilController implements Initializable {
+public class AccueilControleur implements Initializable {
 
-	@FXML private MenuItem mnu_pendu;
-	@FXML private MenuItem mnu_morpion;
-	@FXML private MenuItem mnu_alumette;
-	@FXML private MenuItem mnu_quitter;
-	@FXML private MenuItem mnu_aide;
-	@FXML private MenuItem mnu_sql;
-	@FXML private MenuItem mnu_liste_memoire;
-	@FXML private MenuItem mnu_info;
-	
+	@FXML private MenuItem menuPendu;
+	@FXML private MenuItem menuMorpion;
+	@FXML private MenuItem menuAlumette;
+	@FXML private MenuItem menuQuitter;
+	@FXML private MenuItem menuInfo;
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+	}
+
+	// actions au clic sur les menuItem pour choisir le jeu a completer apres
+
+	/*
 	@FXML
 	public void click_mnu_pendu() {
 		try {
@@ -41,17 +46,7 @@ public class AccueilController implements Initializable {
 	        e.printStackTrace();
 	    }
 	}
-	
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
-	// actions au clic sur les mnu_item pour choisir le jeu a completer apres
-	
-	/*
+
 	@FXML
 	public void click_mnu_morpion() {
 		try {
@@ -59,15 +54,13 @@ public class AccueilController implements Initializable {
 	        Parent root1 = (Parent) fxmlLoader.load();
 	        Stage stage = new Stage();
 	        stage.setScene(new Scene(root1));  
-	        stage.setTitle("Menu Client");
+	        stage.setTitle("Jeu du Morpion");
 	        stage.show();
 	    } catch(Exception e) {
 	        e.printStackTrace();
 	    }
 	}
-	*/
 	
-	/*
 	@FXML
 	public void click_mnu_alumette() {
 		try {
@@ -75,33 +68,16 @@ public class AccueilController implements Initializable {
 	        Parent root1 = (Parent) fxmlLoader.load();
 	        Stage stage = new Stage();
 	        stage.setScene(new Scene(root1));  
-	        stage.setTitle("Menu Commande");
+	        stage.setTitle("Jeu des alumettes");
 	        stage.show();
 	    } catch(Exception e) {
 	        e.printStackTrace();
 	    }
 	}
 	*/
-
-	/*
 	
 	@FXML
-	public void click_mnu_produit() {
-		 try {
-		        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Produit.fxml"));
-		        Parent root1 = (Parent) fxmlLoader.load();
-		        Stage stage = new Stage();
-		        stage.setScene(new Scene(root1));  
-		        stage.setTitle("Menu Produit");
-		        stage.show();
-		    } catch(Exception e) {
-		        e.printStackTrace();
-		    }
-	}
-	*/
-	
-	@FXML
-	public void click_mnu_quitter() {
+	public void clickMenuQuitter() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Attention!");
 		alert.setHeaderText("Attention, vous allez fermer l'application");
@@ -114,15 +90,11 @@ public class AccueilController implements Initializable {
 			Platform.exit();
 		}
 	}
-
 	
-	
-	//fenetre Aide.xml a faire apres aussi
-	/*
 	@FXML
-	public void click_mnu_aide() {
+	public void clickMenuAide() {
 		try {
-	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Aide.fxml"));
+	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/Aide.fxml"));
 	        Parent root1 = (Parent) fxmlLoader.load();
 	        Stage stage = new Stage();
 	        stage.setScene(new Scene(root1));  
@@ -132,5 +104,5 @@ public class AccueilController implements Initializable {
 	        e.printStackTrace();
 	    }
 	}
-	*/
+	
 }

@@ -13,35 +13,35 @@
    <children>
       <VBox layoutY="-1.0" prefHeight="564.0" prefWidth="983.0" style="-fx-background-color: #666666;">
          <children>
-            <MenuBar fx:id="mnu_bar" style="-fx-background-color: #525252;">
+            <MenuBar style="-fx-background-color: #525252;">
               <menus>
-                  <Menu fx:id="mnu_persistance" mnemonicParsing="false" text="Afficher">
+                  <Menu mnemonicParsing="false" text="Jouer">
                     <items>
-                      <MenuItem fx:id="mnu_pendu" mnemonicParsing="false"  text="pendu" />
-                        <MenuItem fx:id="mnu_morpion" mnemonicParsing="false"  text="morpion" />
-                        <MenuItem fx:id="mnu_alumette" mnemonicParsing="false"  text="alumette" />
+                      <MenuItem fx:id="menuPendu" mnemonicParsing="false" text="Pendu" />
+                        <MenuItem fx:id="menuMorpion" mnemonicParsing="false" text="Morpion" />
+                        <MenuItem fx:id="menuAlumette" mnemonicParsing="false" text="Alumette" />
                     </items>
                   </Menu>
-                <Menu fx:id="mnu_quitter" mnemonicParsing="false" text="Quitter">
+                <Menu mnemonicParsing="false" text="Quitter">
                      <items>
-                        <MenuItem fx:id="mnu_quitter" mnemonicParsing="false" onAction="#click_mnu_quitter" text="Quitter l'application" />
+                        <MenuItem fx:id="menuQuitter" mnemonicParsing="false" onAction="#clickMenuQuitter" text="Quitter l'application" />
                      </items>
                 </Menu>
-                <Menu fx:id="mnu_aide" mnemonicParsing="false" text="Aide">
+                <Menu mnemonicParsing="false" text="Aide">
                   <items>
-                    <MenuItem fx:id="mnu_info" mnemonicParsing="false"  text="Informations" />
+                    <MenuItem fx:id="menuInfo" mnemonicParsing="false" onAction="#clickMenuAide" text="Informations" />
                   </items>
                 </Menu>
               </menus>
             </MenuBar>
             <Pane prefHeight="532.0" prefWidth="877.0">
                <children>
-                  <Label fx:id="lbl_bienvenue" alignment="CENTER" contentDisplay="TOP" layoutX="137.0" layoutY="56.0" prefHeight="136.0" prefWidth="622.0" text="Bienvenue dans l'application de jeux." textFill="#1530b7f7">
+                  <Label fx:id="lbl1" alignment="CENTER" contentDisplay="TOP" layoutX="137.0" layoutY="56.0" prefHeight="136.0" prefWidth="622.0" text="Bienvenue dans l'application de jeux." textFill="#1530b7f7">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lbl_bienvenue1" alignment="CENTER" layoutX="47.0" layoutY="205.0" prefHeight="263.0" prefWidth="877.0" text="Pour accéder à un jeu, utilisez la barre de menu." textAlignment="CENTER" textFill="#1530b7f7">
+                  <Label fx:id="lbl2" alignment="CENTER" layoutX="47.0" layoutY="205.0" prefHeight="263.0" prefWidth="877.0" text="Pour accéder à un jeu, utilisez la barre de menu." textAlignment="CENTER" textFill="#1530b7f7">
                      <font>
                         <Font size="24.0" />
                      </font>

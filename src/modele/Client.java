@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.Parent;
+import javafx.scene.Node;
 
 
 public class Client extends Application {
@@ -19,13 +20,13 @@ public class Client extends Application {
 		try {
 			URL fxmlURL=getClass().getResource("/vue/Accueil.fxml");
 			FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
-			Parent root = fxmlLoader.load();
+			Node root = fxmlLoader.load();
 			
-			Scene scene = new Scene(root, 900, 700);
+			Scene scene = new Scene( (Parent) root, 900, 700);
 			//scene.getStylesheets().add(getClass().getResource("/vue/Accueil.css").toExternalForm());
 			
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Accueil");
+			primaryStage.setTitle("Accueil de l'application");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -35,13 +36,13 @@ public class Client extends Application {
 	public static void main(String[] args) {
         try {
             String hote="127.0.0.1";
-            int port = Integer.parseInt("6001");
+            int port = Integer.parseInt("6000");
             // lookup est une methode de Naming qui permet de rechercher un objet dans le service de nommage
-			MethodesInterface obj = (MethodesInterface) Naming.lookup ("rmi://"+ hote +":"+port + "/jeu");
+			MethodesInterface obj = (MethodesInterface) Naming.lookup ("rmi://"+ hote +":"+port + "/accueil");
             System.out.println("Client connecte.\nOuverture de l'application.\n");
             launch(args);
         } catch (Exception e) {
-            System.out.println ("Pb avec le client:\n" + e);
+            System.out.println ("Probleme avec le client:\n" + e);
         }
 	}
 }
