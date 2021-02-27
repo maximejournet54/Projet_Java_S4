@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.Parent;
 import javafx.scene.Node;
 
-
 public class Client extends Application {
 		
     //methode qui ouvre l'accueil
@@ -36,7 +35,7 @@ public class Client extends Application {
 	public static void main(String[] args) {
         try {
             String hote="127.0.0.1";
-            int port = Integer.parseInt("6000");
+            final int port = Integer.parseInt("6000");
             // lookup est une methode de Naming qui permet de rechercher un objet dans le service de nommage
 			MethodesInterface obj = (MethodesInterface) Naming.lookup ("rmi://"+ hote +":"+port + "/accueil");
             System.out.println("Client connecte.\nOuverture de l'application.\n");
@@ -45,4 +44,5 @@ public class Client extends Application {
             System.out.println ("Probleme avec le client:\n" + e);
         }
 	}
+	
 }

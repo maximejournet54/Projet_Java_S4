@@ -1,5 +1,6 @@
 package controleur;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -31,26 +32,20 @@ public class AccueilControleur implements Initializable {
 	}
 
 	// actions au clic sur les menuItem pour choisir le jeu a completer apres
+	
+	@FXML
+	public void click_mnu_pendu() throws IOException {
+			//ne lance pas le fichier Pendu.java qui lance le jeu
+            Runtime runtime = Runtime.getRuntime();
+            runtime.exec("javac -cp src/modele/Pendu.java");
+            runtime.exec("java -cp src/modele/Pendu");
+	}
 
 	/*
 	@FXML
-	public void click_mnu_pendu() {
-		try {
-	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Categorie.fxml"));
-	        Parent root1 = (Parent) fxmlLoader.load();
-	        Stage stage = new Stage();
-	        stage.setScene(new Scene(root1)); 
-	        stage.setTitle("Menu Categorie");
-	        stage.show();
-	    } catch(Exception e) {
-	        e.printStackTrace();
-	    }
-	}
-
-	@FXML
 	public void click_mnu_morpion() {
 		try {
-	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Client.fxml"));
+	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/Morpion.fxml"));
 	        Parent root1 = (Parent) fxmlLoader.load();
 	        Stage stage = new Stage();
 	        stage.setScene(new Scene(root1));  
@@ -64,7 +59,7 @@ public class AccueilControleur implements Initializable {
 	@FXML
 	public void click_mnu_alumette() {
 		try {
-	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/Commande.fxml"));
+	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/Alumettes.fxml"));
 	        Parent root1 = (Parent) fxmlLoader.load();
 	        Stage stage = new Stage();
 	        stage.setScene(new Scene(root1));  
