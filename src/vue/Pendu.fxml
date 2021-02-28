@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#init" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.PenduControleur">
+   <top>
+      <MenuBar fx:id="menu" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="menufi" mnemonicParsing="false" text="Fichier">
+               <items>
+                  <MenuItem fx:id="menuRej" mnemonicParsing="false" onAction="#menuClic" text="Rejouer" />
+                  <MenuItem fx:id="menuRet" mnemonicParsing="false" onAction="#menuClic" text="Retour" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="z" layoutX="225.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" text="Z" />
+            <Button fx:id="y" layoutX="193.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" text="Y" />
+            <Button fx:id="d" layoutX="158.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" text="D" />
+            <Button fx:id="c" layoutX="124.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" text="C" />
+            <Button fx:id="i" layoutX="92.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" text="I" />
+            <Button fx:id="j" layoutX="124.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" text="J" />
+            <Button fx:id="b" layoutX="88.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" text="B" />
+            <Button fx:id="a" layoutX="51.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" text="A" />
+            <Button layoutX="158.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" text="X" fx:id="x" />
+            <Button fx:id="w" layoutX="122.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" text="W" />
+            <Button fx:id="v" layoutX="87.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" text="V" />
+            <Button fx:id="u" layoutX="260.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" text="U" />
+            <Button fx:id="h" layoutX="51.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" text="H" />
+            <Button fx:id="g" layoutX="260.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" text="G" />
+            <Button fx:id="f" layoutX="225.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" text="F" />
+            <Button fx:id="e" layoutX="194.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" text="E" />
+            <Button fx:id="t" layoutX="225.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" text="T" />
+            <Button fx:id="s" layoutX="159.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" text="S" />
+            <Button fx:id="r" layoutX="193.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" text="R" />
+            <Button fx:id="q" layoutX="121.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" text="Q" />
+            <Button fx:id="p" layoutX="90.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" text="P" />
+            <Button fx:id="o" layoutX="50.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" text="O" />
+            <Button fx:id="l" layoutX="195.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" text="L" />
+            <Button fx:id="n" layoutX="260.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" text="N" />
+            <Button fx:id="m" layoutX="223.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" text="M" />
+            <Button fx:id="k" layoutX="159.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" text="K" />
+            <Label fx:id="labeltitre" layoutX="63.0" layoutY="23.0" prefHeight="17.0" prefWidth="173.0" text="Bienvenue sur le  jeu du pendu" />
+            <ListView fx:id="liste" layoutX="47.0" layoutY="276.0" prefHeight="68.0" prefWidth="214.0" />
+            <Label fx:id="lab1" layoutX="90.0" layoutY="83.0" />
+            <Label fx:id="lab2" layoutX="100.0" layoutY="83.0" />
+            <Label fx:id="lab3" layoutX="110.0" layoutY="83.0" />
+            <Label fx:id="lab4" layoutX="120.0" layoutY="83.0" />
+            <Label fx:id="lab5" layoutX="130.0" layoutY="83.0" />
+            <Label fx:id="lab6" layoutX="140.0" layoutY="83.0" />
+            <Label fx:id="lab7" layoutX="150.0" layoutY="83.0" />
+            <Label fx:id="lab8" layoutX="160.0" layoutY="83.0" />
+            <Label fx:id="lab9" layoutX="170.0" layoutY="83.0" />
+            <Label fx:id="lab10" layoutX="180.0" layoutY="83.0" prefHeight="17.0" prefWidth="10.0" />
+            <Label fx:id="lab11" layoutX="190.0" layoutY="83.0" />
+            <Label fx:id="lab12" layoutX="200.0" layoutY="83.0" />
+            <Label fx:id="lab13" layoutX="210.0" layoutY="83.0" />
+            <Label fx:id="lab14" layoutX="220.0" layoutY="83.0" />
+            <Label fx:id="lab15" layoutX="230.0" layoutY="83.0" />
+            <Label fx:id="joueur" layoutX="177.0" layoutY="349.0" prefHeight="17.0" prefWidth="376.0" text="Pour commencer une partie, appuyer sur une touche du clavier." />
+         </children>
+      </Pane>
+   </center>
+   <right>
+      <AnchorPane fx:id="AnchorPane" prefHeight="342.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+         <children>
+            <Line fx:id="l1" endX="100.0" layoutX="146.0" layoutY="295.0" startX="-100.0" visible="false" />
+            <Line fx:id="l2" endX="10.0" endY="-30.0" layoutX="75.0" layoutY="100.0" startX="10.0" startY="200.0" visible="false" />
+            <Line fx:id="l3" endX="100.0" layoutX="139.0" layoutY="70.0" startX="-100.0" visible="false" />
+            <Line fx:id="l5" endX="-20.0" endY="5.0" layoutX="200.0" layoutY="66.0" startX="-20.0" startY="30.0" visible="false" />
+            <Circle fx:id="c6" fill="WHITE" layoutX="181.0" layoutY="120.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <Line fx:id="l7" endX="-20.0" endY="-10.0" layoutX="200.0" layoutY="150.0" startX="-20.0" startY="80.0" visible="false" />
+            <Line fx:id="l8" endX="100.0" layoutX="80.0" layoutY="166.0" startX="60.0" startY="40.0" visible="false" />
+            <Line fx:id="l9" endX="100.0" layoutX="120.0" layoutY="206.0" startX="60.0" startY="-40.0" visible="false" />
+            <Line fx:id="l11" endX="100.0" layoutX="80.0" layoutY="230.0" startX="60.0" startY="40.0" visible="false" />
+            <Line fx:id="l10" endX="100.0" layoutX="120.0" layoutY="270.0" startX="60.0" startY="-40.0" visible="false" />
+            <Line fx:id="l4" endX="50.0" layoutX="80.0" layoutY="70.0" startX="5.0" startY="30.0" visible="false" />
+            <Label fx:id="laberror" layoutX="68.0" layoutY="317.0" prefHeight="27.0" prefWidth="165.0" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

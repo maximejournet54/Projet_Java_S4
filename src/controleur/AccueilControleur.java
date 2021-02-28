@@ -6,6 +6,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,6 +17,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class AccueilControleur implements Initializable {
@@ -34,11 +36,21 @@ public class AccueilControleur implements Initializable {
 	// actions au clic sur les menuItem pour choisir le jeu a completer apres
 	
 	@FXML
-	public void click_mnu_pendu() throws IOException {
-			//ne lance pas le fichier Pendu.java qui lance le jeu
-            Runtime runtime = Runtime.getRuntime();
-            runtime.exec("javac -cp src/modele/Pendu.java");
-            runtime.exec("java -cp src/modele/Pendu");
+	public void click_mnu_pendu(ActionEvent event) {
+	    try{
+	    	Stage stage = new Stage();
+	            
+			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("/vue/Pendu.fxml"));
+			Scene scene = new Scene(root); //redimmension auto 
+	        //stage.initModality(Modality.APPLICATION_MODAL); //pour cacher la zone fenetre de windows
+	        //stage.initStyle(StageStyle.UNDECORATED);
+	        stage.setTitle("Pendu");       
+	        stage.setScene(scene);		
+			stage.setResizable(false);
+	        stage.show();   	
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
 	}
 
 	/*

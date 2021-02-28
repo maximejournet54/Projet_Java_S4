@@ -11,7 +11,7 @@ public class Serveur {
             // createRegistry permet de lancer le rmiregistry sur le port indique
             LocateRegistry.createRegistry(port);
             Methodes obj=new Methodes();
-            Naming.rebind ("rmi://"+ hote +":"+port+ "/accueil", obj);
+            Naming.rebind ("rmi://"+ hote +":"+port+ "/jeux", obj);
             System.out.println ("Serveur pret !\n");
         } catch (Exception e) {
                 System.out.println ("Probleme avec le serveur:\n" + e);

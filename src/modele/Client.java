@@ -37,7 +37,7 @@ public class Client extends Application {
             String hote="127.0.0.1";
             final int port = Integer.parseInt("6000");
             // lookup est une methode de Naming qui permet de rechercher un objet dans le service de nommage
-			MethodesInterface obj = (MethodesInterface) Naming.lookup ("rmi://"+ hote +":"+port + "/accueil");
+			MethodesInterface obj = (MethodesInterface) Naming.lookup ("rmi://"+ hote +":"+port + "/jeux");
             System.out.println("Client connecte.\nOuverture de l'application.\n");
             launch(args);
         } catch (Exception e) {
