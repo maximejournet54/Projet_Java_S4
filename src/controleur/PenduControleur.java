@@ -4,14 +4,21 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.Optional;
+
 import modele.MethodesInterface;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuBar;
@@ -53,23 +60,23 @@ public class PenduControleur {
 	@FXML MenuItem fe;
 	//labels
 	@FXML Label joueur;
-	@FXML Label labeltitre;
-	@FXML Label lab1;
-	@FXML Label lab2;
-	@FXML Label lab3;
-	@FXML Label lab4;
-	@FXML Label lab5;
-	@FXML Label lab6;
-	@FXML Label lab7;
-	@FXML Label lab8;
-	@FXML Label lab9;
-	@FXML Label lab10;
-	@FXML Label lab11;
-	@FXML Label lab12;
-	@FXML Label lab13;
-	@FXML Label lab14;
-	@FXML Label lab15;
-	@FXML Label laberror;
+	@FXML Label lblTitre;
+	@FXML Label lbl1;
+	@FXML Label lbl2;
+	@FXML Label lbl3;
+	@FXML Label lbl4;
+	@FXML Label lbl5;
+	@FXML Label lbl6;
+	@FXML Label lbl7;
+	@FXML Label lbl8;
+	@FXML Label lbl9;
+	@FXML Label lbl10;
+	@FXML Label lbl11;
+	@FXML Label lbl12;
+	@FXML Label lbl13;
+	@FXML Label lbl14;
+	@FXML Label lbl15;
+	@FXML Label lblErreur;
 	//Anchorpane
 	@FXML javafx.scene.layout.AnchorPane AnchorPane;
 	//ListeView
@@ -89,7 +96,7 @@ public class PenduControleur {
 	@FXML Line l11;
 	@FXML Circle c6;
 	   
-	String cmot;
+	String mot;
 	   
 	public int erreur=0;
 	   
@@ -97,172 +104,171 @@ public class PenduControleur {
 	   
 	public void init() throws RemoteException, MalformedURLException, NotBoundException{
 		   
-	MethodesInterface obj = (MethodesInterface) Naming.lookup("rmi://127.0.0.1:6000/jeux");
-	        
-	cmot = obj.motPendu();
-	 	   
-	System.out.println("Mot : "+cmot);
-		   
-	//afficher+cacher le mot le mot dans le label
-	int taille = ((String) cmot).length();
-	if (taille >= 1)
-		lab1.setText("*");
-	if (taille >= 2)
-		lab2.setText("*");
-	if (taille >= 3)
-		lab3.setText("*");
-	if (taille >= 4)
-		lab4.setText("*");
-	if (taille >= 5)
-		lab5.setText("*");
-	if (taille >= 6)
-		lab6.setText("*");
-	if (taille >= 7)
-		lab7.setText("*");
-	if (taille >= 8)
-		lab8.setText("*");
-	if (taille >= 9)
-		lab9.setText("*");
-	if (taille >= 10)
-		lab10.setText("*");
-	if (taille >= 11)
-		lab11.setText("*");
-	if (taille >= 12)
-		lab12.setText("*");
-	if (taille >= 13)
-		lab13.setText("*");
-	if (taille >= 14)
-		lab14.setText("*");
-	if (taille >= 15)
-		lab15.setText("*");
-}  
+		MethodesInterface obj = (MethodesInterface) Naming.lookup("rmi://127.0.0.1:6000/jeux");
+				
+		mot = obj.motPendu();
+			
+		System.out.println("Mot : "+mot);
+			
+		//afficher+cacher le mot le mot dans le label
+		int taille = ((String) mot).length();
+		if (taille >= 1)
+			lbl1.setText("*");
+		if (taille >= 2)
+			lbl2.setText("*");
+		if (taille >= 3)
+			lbl3.setText("*");
+		if (taille >= 4)
+			lbl4.setText("*");
+		if (taille >= 5)
+			lbl5.setText("*");
+		if (taille >= 6)
+			lbl6.setText("*");
+		if (taille >= 7)
+			lbl7.setText("*");
+		if (taille >= 8)
+			lbl8.setText("*");
+		if (taille >= 9)
+			lbl9.setText("*");
+		if (taille >= 10)
+			lbl10.setText("*");
+		if (taille >= 11)
+			lbl11.setText("*");
+		if (taille >= 12)
+			lbl12.setText("*");
+		if (taille >= 13)
+			lbl13.setText("*");
+		if (taille >= 14)
+			lbl14.setText("*");
+		if (taille >= 15)
+			lbl15.setText("*");
+	}  
 	  
 	public void btnclic (ActionEvent event) throws RemoteException {
 		Button boutonClique = (Button) event.getTarget();
 		Button boutonNon = (Button) event.getTarget();
 		String boutonLabel = boutonClique.getText();
 			
-			
 		int pos = 0;
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 0){
-			lab1.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 0){
+			lbl1.setText(boutonClique.getText());
 			pos=1;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 1){
-			lab2.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 1){
+			lbl2.setText(boutonClique.getText());
 			pos=2;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 2){
-			lab3.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 2){
+			lbl3.setText(boutonClique.getText());
 			pos=3;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 3){
-			lab4.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 3){
+			lbl4.setText(boutonClique.getText());
 			pos=4;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 4){
-			lab5.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 4){
+			lbl5.setText(boutonClique.getText());
 			pos=5;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 5){
-			lab6.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 5){
+			lbl6.setText(boutonClique.getText());
 			pos=6;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 6){
-			lab7.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 6){
+			lbl7.setText(boutonClique.getText());
 			pos=7;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 7){
-			lab8.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 7){
+			lbl8.setText(boutonClique.getText());
 			pos=8;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 8){
-			lab9.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 8){
+			lbl9.setText(boutonClique.getText());
 			pos=9;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 9){
-			lab10.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 9){
+			lbl10.setText(boutonClique.getText());
 			pos=10;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 10){
-			lab11.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 10){
+			lbl11.setText(boutonClique.getText());
 			pos=11;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 11){
-			lab12.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 11){
+			lbl12.setText(boutonClique.getText());
 			pos=12;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 12){
-			lab13.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 12){
+			lbl13.setText(boutonClique.getText());
 			pos=13;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 13){
-			lab14.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 13){
+			lbl14.setText(boutonClique.getText());
 			pos=14;
 		}
-		if(cmot.toUpperCase().indexOf(boutonClique.getText(),pos) == 14){
-			lab15.setText(boutonClique.getText());
+		if(mot.toUpperCase().indexOf(boutonClique.getText(),pos) == 14){
+			lbl15.setText(boutonClique.getText());
 			pos=15;
 		}
 		System.out.println(erreur);
 		//S'il s'agit d'une mauvaise
-		if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 0){
+		if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 0){
 			l1.setVisible(true);
 			erreur=1;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 1){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 1){
 			l2.setVisible(true);
 			erreur=2;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 2){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 2){
 			l3.setVisible(true);
 			erreur=3;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 3){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 3){
 			l4.setVisible(true);
 			erreur=4;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 4){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 4){
 			l5.setVisible(true);
 			erreur=5;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 5){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 5){
 			c6.setVisible(true);
 			erreur=6;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 6){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 6){
 			l7.setVisible(true);
 			erreur=7;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 7){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 7){
 			l8.setVisible(true);
 			erreur=8;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 8){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 8){
 			l9.setVisible(true);
 			erreur=9;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 9){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 9){
 			l10.setVisible(true);
 			erreur=10;
 		}
-		else if (cmot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 10){
+		else if (mot.toUpperCase().indexOf(boutonClique.getText()) == -1 && erreur == 10){
 			l11.setVisible(true);
 			erreur=11;
 		}
 		if(erreur==11 ){
-			laberror.setText("Vous avez perdu");
+			lblErreur.setText("Vous avez perdu");
 		}
 			
 		//cacher le bouton quand on clique dessus
 		boutonClique.setDisable(true);
 			
 		//si le joueur gagne
-		if( lab1.getText()!= "*" && lab2.getText()!="*" && lab3.getText()!="*" && lab4.getText()!="*"
-			&& lab5.getText()!="*" && lab6.getText()!="*" && lab7.getText()!="*" && lab8.getText()!="*"
-			&& lab9.getText()!="*" && lab10.getText()!="*" && lab11.getText()!="*" && lab12.getText()!="*"
-			&& lab13.getText()!="*" && lab14.getText()!="*" && lab15.getText()!="*"){
-				laberror.setText("vous avez gagne!");
+		if( lbl1.getText()!= "*" && lbl2.getText()!="*" && lbl3.getText()!="*" && lbl4.getText()!="*"
+			&& lbl5.getText()!="*" && lbl6.getText()!="*" && lbl7.getText()!="*" && lbl8.getText()!="*"
+			&& lbl9.getText()!="*" && lbl10.getText()!="*" && lbl11.getText()!="*" && lbl12.getText()!="*"
+			&& lbl13.getText()!="*" && lbl14.getText()!="*" && lbl15.getText()!="*"){
+				lblErreur.setText("vous avez gagne!");
 				victoire=true;
 			}		 
 			
@@ -360,7 +366,7 @@ public class PenduControleur {
 			
 		if ("Rejouer".equals(menuLabel)){
 			//recup de la fenetre a l'aide d'un element
-			Stage stageCourant = (Stage) labeltitre.getScene().getWindow();
+			Stage stageCourant = (Stage) lblTitre.getScene().getWindow();
 			stageCourant.close();
 			//lancement de la seconde fenetre
 			try{
@@ -378,9 +384,10 @@ public class PenduControleur {
 			}
 		}
 			
-		if ("Retour".equals(menuLabel)){
+		if ("Quitter".equals(menuLabel)){
+			/*
 			//recup de la fenetre a l'aide d'un element
-			Stage stageCourant = (Stage) labeltitre.getScene().getWindow();
+			Stage stageCourant = (Stage) lblTitre.getScene().getWindow();
 			stageCourant.close();
 			//lancement de la seconde fenetre
 			try{
@@ -396,6 +403,19 @@ public class PenduControleur {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			*/
+			Alert alert = new Alert(AlertType.CONFIRMATION);
+			alert.setTitle("Attention!");
+			alert.setHeaderText("Attention, vous allez fermer l'application");
+			alert.setContentText("Voulez-vous vraiment fermer l'application?");
+			ButtonType btnOui = new ButtonType("Oui");
+			ButtonType btnNon = new ButtonType("Non", ButtonData.CANCEL_CLOSE);
+			alert.getButtonTypes().setAll(btnOui,btnNon);
+			Optional<ButtonType> result = alert.showAndWait();
+			if (result.get() == btnOui){
+				Platform.exit();
+			}
+
 		}
 
 	}

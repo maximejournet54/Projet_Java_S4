@@ -26,6 +26,7 @@ public class Client extends Application {
 			
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Accueil de l'application");
+			primaryStage.setResizable(false);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
