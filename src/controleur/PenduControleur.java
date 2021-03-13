@@ -142,9 +142,19 @@ public class PenduControleur {
 			lbl14.setText("*");
 		if (taille >= 15)
 			lbl15.setText("*");
+		if (taille >= 16)
+			lbl15.setText("*");
+		if (taille >= 17)
+			lbl15.setText("*");
+		if (taille >= 18)
+			lbl15.setText("*");
+		if (taille >= 19)
+			lbl15.setText("*");
+		if (taille >= 20)
+			lbl15.setText("*");
 	}  
 	  
-	public void btnclic (ActionEvent event) throws RemoteException {
+	public void clickBtn (ActionEvent event) throws RemoteException {
 		Button boutonClique = (Button) event.getTarget();
 		Button boutonNon = (Button) event.getTarget();
 		String boutonLabel = boutonClique.getText();
@@ -360,21 +370,19 @@ public class PenduControleur {
 	}
 	   
 	//Initialisation menu
-	public void menuClic(ActionEvent evt) throws RemoteException {
+	public void menuClic(ActionEvent evt) {
 		MenuItem menuClique = (MenuItem) evt.getTarget();
 		String menuLabel = menuClique.getText();
 			
 		if ("Rejouer".equals(menuLabel)){
 			//recup de la fenetre a l'aide d'un element
-			Stage stageCourant = (Stage) lblTitre.getScene().getWindow();
-			stageCourant.close();
+			Stage interfaceActuelle = (Stage) lblTitre.getScene().getWindow();
+			interfaceActuelle.close();
 			//lancement de la seconde fenetre
 			try{
 				Stage stage = new Stage();
 				BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("/vue/Pendu.fxml"));
 				Scene scene = new Scene(root); //redimmension auto 
-				//stage.initModality(Modality.APPLICATION_MODAL); //pour cacher la zone fenetre de windows
-				//stage.initStyle(StageStyle.UNDECORATED);
 				stage.setTitle("Pendu");       
 				stage.setScene(scene);		
 				stage.setResizable(false);
@@ -385,37 +393,17 @@ public class PenduControleur {
 		}
 			
 		if ("Quitter".equals(menuLabel)){
-			/*
-			//recup de la fenetre a l'aide d'un element
-			Stage stageCourant = (Stage) lblTitre.getScene().getWindow();
-			stageCourant.close();
-			//lancement de la seconde fenetre
-			try{
-				Stage stage = new Stage();
-				AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/vue/Accueil.fxml"));
-				Scene scene = new Scene(root); //redimmension auto 
-				//stage.initModality(Modality.APPLICATION_MODAL); //pour cacher la zone fenetre de windows
-				//stage.initStyle(StageStyle.UNDECORATED);
-				stage.setTitle("Pendu");       
-				stage.setScene(scene);		
-				stage.setResizable(false);
-				stage.show();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			*/
-			Alert alert = new Alert(AlertType.CONFIRMATION);
-			alert.setTitle("Attention!");
-			alert.setHeaderText("Attention, vous allez fermer l'application");
-			alert.setContentText("Voulez-vous vraiment fermer l'application?");
+			Alert alerte = new Alert(AlertType.CONFIRMATION);
+			alerte.setTitle("Attention!");
+			alerte.setHeaderText("Attention, vous allez fermer l'application");
+			alerte.setContentText("Voulez-vous vraiment fermer l'application?");
 			ButtonType btnOui = new ButtonType("Oui");
 			ButtonType btnNon = new ButtonType("Non", ButtonData.CANCEL_CLOSE);
-			alert.getButtonTypes().setAll(btnOui,btnNon);
-			Optional<ButtonType> result = alert.showAndWait();
-			if (result.get() == btnOui){
+			alerte.getButtonTypes().setAll(btnOui,btnNon);
+			Optional<ButtonType> resultat = alerte.showAndWait();
+			if (resultat.get() == btnOui){
 				Platform.exit();
 			}
-
 		}
 
 	}

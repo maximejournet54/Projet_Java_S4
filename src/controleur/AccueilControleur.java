@@ -36,7 +36,7 @@ public class AccueilControleur implements Initializable {
 	// actions au clic sur les menuItem pour choisir le jeu a completer apres
 	
 	@FXML
-	public void click_mnu_pendu(ActionEvent event) {
+	public void clickMenuPendu() {
 	    try{
 	    	Stage stage = new Stage();
 	            
@@ -44,10 +44,10 @@ public class AccueilControleur implements Initializable {
 			Scene scene = new Scene(root); //redimmension auto 
 	        //stage.initModality(Modality.APPLICATION_MODAL); //pour cacher la zone fenetre de windows
 	        //stage.initStyle(StageStyle.UNDECORATED);
-	        stage.setTitle("Pendu");       
-	        stage.setScene(scene);		
+			stage.setTitle("Pendu");       
+			stage.setScene(scene);		
 			stage.setResizable(false);
-	        stage.show();   	
+			stage.show();   	
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
@@ -55,7 +55,7 @@ public class AccueilControleur implements Initializable {
 
 	/*
 	@FXML
-	public void click_mnu_morpion() {
+	public void clickMenuMorpion() {
 		try {
 	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/Morpion.fxml"));
 	        Parent root1 = (Parent) fxmlLoader.load();
@@ -69,7 +69,7 @@ public class AccueilControleur implements Initializable {
 	}
 	
 	@FXML
-	public void click_mnu_alumette() {
+	public void clickMenuAlumette() {
 		try {
 	        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/Alumettes.fxml"));
 	        Parent root1 = (Parent) fxmlLoader.load();
@@ -85,15 +85,15 @@ public class AccueilControleur implements Initializable {
 	
 	@FXML
 	public void clickMenuQuitter() {
-		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setTitle("Attention!");
-		alert.setHeaderText("Attention, vous allez fermer l'application");
-		alert.setContentText("Voulez-vous vraiment fermer l'application?");
+		Alert alerte = new Alert(AlertType.CONFIRMATION);
+		alerte.setTitle("Attention!");
+		alerte.setHeaderText("Attention, vous allez fermer l'application");
+		alerte.setContentText("Voulez-vous vraiment fermer l'application?");
 		ButtonType btnOui = new ButtonType("Oui");
 		ButtonType btnNon = new ButtonType("Non", ButtonData.CANCEL_CLOSE);
-		alert.getButtonTypes().setAll(btnOui,btnNon);
-		Optional<ButtonType> result = alert.showAndWait();
-		if (result.get() == btnOui){
+		alerte.getButtonTypes().setAll(btnOui,btnNon);
+		Optional<ButtonType> resultat = alerte.showAndWait();
+		if (resultat.get() == btnOui){
 			Platform.exit();
 		}
 	}

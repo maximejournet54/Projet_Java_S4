@@ -29,32 +29,32 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="z" layoutX="225.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="Z" textFill="#1530b7" />
-            <Button fx:id="y" layoutX="193.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="Y" textFill="#1530b7" />
-            <Button fx:id="d" layoutX="158.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="D" textFill="#1530b7" />
-            <Button fx:id="c" layoutX="124.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="C" textFill="#1530b7" />
-            <Button fx:id="i" layoutX="89.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: #666666;" text="I" textFill="#1530b7" />
-            <Button fx:id="j" layoutX="122.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #666666;" text="J" textFill="#1530b7" />
-            <Button fx:id="b" layoutX="88.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="B" textFill="#1530b7" />
-            <Button fx:id="a" layoutX="51.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="A" textFill="#1530b7" />
-            <Button layoutX="158.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="X" textFill="#1530b7" fx:id="x" />
-            <Button fx:id="w" layoutX="122.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="W" textFill="#1530b7" />
-            <Button fx:id="v" layoutX="90.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="V" textFill="#1530b7" />
-            <Button fx:id="u" layoutX="260.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="U" textFill="#1530b7" />
-            <Button fx:id="h" layoutX="51.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="H" textFill="#1530b7" />
-            <Button fx:id="g" layoutX="260.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="G" textFill="#1530b7" />
-            <Button fx:id="f" layoutX="225.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="F" textFill="#1530b7" />
-            <Button fx:id="e" layoutX="194.0" layoutY="127.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="E" textFill="#1530b7" />
-            <Button fx:id="t" layoutX="224.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #666666;" text="T" textFill="#1530b7" />
-            <Button fx:id="s" layoutX="159.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="S" textFill="#1530b7" />
-            <Button fx:id="r" layoutX="193.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="R" textFill="#1530b7" />
-            <Button fx:id="q" layoutX="121.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="Q" textFill="#1530b7" />
-            <Button fx:id="p" layoutX="90.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="P" textFill="#1530b7" />
-            <Button fx:id="o" layoutX="50.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="O" textFill="#1530b7" />
-            <Button fx:id="l" layoutX="195.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="L" textFill="#1530b7" />
-            <Button fx:id="n" layoutX="260.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="N" textFill="#1530b7" />
-            <Button fx:id="m" layoutX="223.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="M" textFill="#1530b7" />
-            <Button fx:id="k" layoutX="159.0" layoutY="165.0" mnemonicParsing="false" onAction="#btnclic" style="-fx-background-color: #666666;" text="K" textFill="#1530b7" />
+            <Button fx:id="z" layoutX="225.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="Z" textFill="#1530b7" />
+            <Button fx:id="y" layoutX="193.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="Y" textFill="#1530b7" />
+            <Button fx:id="d" layoutX="158.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="D" textFill="#1530b7" />
+            <Button fx:id="c" layoutX="124.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="C" textFill="#1530b7" />
+            <Button fx:id="i" layoutX="89.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: #666666;" text="I" textFill="#1530b7" />
+            <Button fx:id="j" layoutX="122.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #666666;" text="J" textFill="#1530b7" />
+            <Button fx:id="b" layoutX="88.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="B" textFill="#1530b7" />
+            <Button fx:id="a" layoutX="51.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="A" textFill="#1530b7" />
+            <Button layoutX="158.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="X" textFill="#1530b7" fx:id="x" />
+            <Button fx:id="w" layoutX="122.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="W" textFill="#1530b7" />
+            <Button fx:id="v" layoutX="90.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="V" textFill="#1530b7" />
+            <Button fx:id="u" layoutX="260.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="U" textFill="#1530b7" />
+            <Button fx:id="h" layoutX="51.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="H" textFill="#1530b7" />
+            <Button fx:id="g" layoutX="260.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="G" textFill="#1530b7" />
+            <Button fx:id="f" layoutX="225.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="F" textFill="#1530b7" />
+            <Button fx:id="e" layoutX="194.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="E" textFill="#1530b7" />
+            <Button fx:id="t" layoutX="224.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #666666;" text="T" textFill="#1530b7" />
+            <Button fx:id="s" layoutX="159.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="S" textFill="#1530b7" />
+            <Button fx:id="r" layoutX="193.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="R" textFill="#1530b7" />
+            <Button fx:id="q" layoutX="121.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="Q" textFill="#1530b7" />
+            <Button fx:id="p" layoutX="90.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="P" textFill="#1530b7" />
+            <Button fx:id="o" layoutX="50.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="O" textFill="#1530b7" />
+            <Button fx:id="l" layoutX="195.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="L" textFill="#1530b7" />
+            <Button fx:id="n" layoutX="260.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="N" textFill="#1530b7" />
+            <Button fx:id="m" layoutX="223.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="M" textFill="#1530b7" />
+            <Button fx:id="k" layoutX="159.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="K" textFill="#1530b7" />
             <Label fx:id="lblTitre" layoutX="25.0" layoutY="22.0" prefHeight="28.0" prefWidth="271.0" text="Bienvenue sur le  jeu du pendu!" textFill="#1530b7">
                <font>
                   <Font size="18.0" />
@@ -143,7 +143,7 @@
             <Line fx:id="l4" endX="50.0" layoutX="80.0" layoutY="70.0" startX="5.0" startY="30.0" visible="false" />
             <Label fx:id="lblErreur" layoutX="68.0" layoutY="317.0" prefHeight="27.0" prefWidth="165.0" textFill="#1530b7">
                <font>
-                  <Font size="14.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
          </children>

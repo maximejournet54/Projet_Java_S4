@@ -24,8 +24,8 @@ public class Methodes extends UnicastRemoteObject implements MethodesInterface {
 			String mot="";
 			String fichier ="dictionnaire.txt";
 			int compteur =0;
-			Random randomGenerator = new Random();
-			int limite = randomGenerator.nextInt(15743);//15743=nb de mots du dictionnaire
+			Random rand = new Random();
+			int limite = rand.nextInt(15743);//15743=nombre de mots du dictionnaire
 			System.out.println(limite+"\n");
 			//lecture du fichier texte	
 			try{

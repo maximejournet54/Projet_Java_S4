@@ -15,7 +15,7 @@ public class Client extends Application {
 		
     //methode qui ouvre l'accueil
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage stage) {
 		try {
 			URL fxmlURL=getClass().getResource("/vue/Accueil.fxml");
 			FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
@@ -24,10 +24,10 @@ public class Client extends Application {
 			Scene scene = new Scene( (Parent) root, 900, 700);
 			//scene.getStylesheets().add(getClass().getResource("/vue/Accueil.css").toExternalForm());
 			
-			primaryStage.setScene(scene);
-			primaryStage.setTitle("Accueil de l'application");
-			primaryStage.setResizable(false);
-			primaryStage.show();
+			stage.setScene(scene);
+			stage.setTitle("Accueil de l'application");
+			stage.setResizable(false);
+			stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

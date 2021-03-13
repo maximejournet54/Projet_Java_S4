@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="983.0" style="-fx-background-color: #525252;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="983.0" style="-fx-background-color: #525252;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.AccueilControleur">
    <children>
       <VBox layoutY="-1.0" prefHeight="564.0" prefWidth="983.0">
          <children>
@@ -17,7 +17,7 @@
               <menus>
                   <Menu mnemonicParsing="false" text="Jouer">
                     <items>
-                      <MenuItem fx:id="menuPendu" mnemonicParsing="false" onAction="#click_mnu_pendu" text="Pendu" />
+                      <MenuItem fx:id="menuPendu" mnemonicParsing="false" onAction="#clickMenuPendu" text="Pendu" />
                         <MenuItem fx:id="menuMorpion" mnemonicParsing="false" text="Morpion" />
                         <MenuItem fx:id="menuAlumette" mnemonicParsing="false" text="Alumette" />
                     </items>
