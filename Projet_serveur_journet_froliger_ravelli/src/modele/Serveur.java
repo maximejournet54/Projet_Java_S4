@@ -1,12 +1,12 @@
 package modele;
 
-import controller.ImplementationAccueil;
-import controller.ImplementationAllumettes;
-import controller.ImplementationMorpion;
-import controller.ImplementationPendu;
-
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
+
+import controleur.ImplementationAccueil;
+import controleur.ImplementationAllumettes;
+import controleur.ImplementationMorpion;
+import controleur.ImplementationPendu;
 
 public class Serveur {
     public static void main(String[] args) {

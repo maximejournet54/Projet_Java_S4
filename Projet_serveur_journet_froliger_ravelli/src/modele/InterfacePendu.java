@@ -11,4 +11,5 @@ public interface InterfacePendu extends Remote {
     public void menuClic(ActionEvent evt) throws RemoteException;
     public void init() throws RemoteException, MalformedURLException, NotBoundException;
     public void clickBtn(ActionEvent event) throws RemoteException;
+    public String motPendu() throws RemoteException;
 }
