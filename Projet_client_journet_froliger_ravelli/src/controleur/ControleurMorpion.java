@@ -2,6 +2,7 @@ package controleur;
 
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -46,6 +47,8 @@ public class ControleurMorpion{
     private ImageView im8;
     @FXML
     private ImageView im9;
+    @FXML
+    private Button btn_rejouer;
 
     
     
