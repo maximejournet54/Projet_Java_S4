@@ -9,17 +9,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="983.0" style="-fx-background-color: #525252;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurAccueil">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="900.0" style="-fx-background-color: #7cacd6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurAccueil">
    <children>
-      <VBox layoutY="-1.0" prefHeight="564.0" prefWidth="983.0">
+      <VBox layoutY="-1.0" prefHeight="556.0" prefWidth="900.0">
          <children>
-            <MenuBar style="-fx-background-color: #666666;">
+            <MenuBar style="-fx-background-color: #7cacf9;">
               <menus>
                   <Menu mnemonicParsing="false" text="Jouer">
                     <items>
                       <MenuItem fx:id="menuPendu" mnemonicParsing="false" onAction="#clickMenuPendu" text="Pendu" />
                         <MenuItem fx:id="menuMorpion" mnemonicParsing="false" onAction="#clickMenuMorpion" text="Morpion" />
-                        <MenuItem fx:id="menuAlumette" mnemonicParsing="false" onAction="#clickMenuAlumettes"  text="Alumette" />
+                        <MenuItem fx:id="menuAlumette" mnemonicParsing="false" onAction="#clickMenuAlumettes" text="Alumette" />
                     </items>
                   </Menu>
                 <Menu mnemonicParsing="false" text="Quitter">
@@ -34,14 +34,14 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Pane prefHeight="532.0" prefWidth="877.0">
+            <Pane prefHeight="539.0" prefWidth="983.0" style="-fx-background-color: #7cacd6;">
                <children>
-                  <Label fx:id="lbl1" alignment="CENTER" contentDisplay="TOP" layoutX="137.0" layoutY="56.0" prefHeight="136.0" prefWidth="622.0" text="Bienvenue dans l'application de jeux." textFill="#1530b7f7">
+                  <Label fx:id="lbl1" alignment="CENTER" contentDisplay="TOP" layoutX="137.0" layoutY="56.0" prefHeight="136.0" prefWidth="622.0" text="Bienvenue dans l'application de jeux." textFill="#000000f7">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lbl2" alignment="CENTER" layoutX="47.0" layoutY="205.0" prefHeight="263.0" prefWidth="877.0" text="Pour accéder à un jeu, utilisez la barre de menu." textAlignment="CENTER" textFill="#1530b7f7">
+                  <Label fx:id="lbl2" alignment="CENTER" layoutX="47.0" layoutY="205.0" prefHeight="263.0" prefWidth="877.0" text="Pour accéder à un jeu, utilisez la barre de menu." textAlignment="CENTER" textFill="#000000f7">
                      <font>
                         <Font size="24.0" />
                      </font>

@@ -58,13 +58,13 @@ public class ControleurMorpion{
             if (obj instanceof InterfaceMorpion) {
             	if(temp == null) {
             		if(test % 2 ==0) {
-            			imageX = new Image(ControleurMorpion.class.getResource("../vue/X.png").toString());
+            			imageX = new Image(ControleurMorpion.class.getResource("/vue/icone_etoile.png").toString());
                 		img.setImage(imageX);
                 		((InterfaceMorpion)obj).PlacerX(numCase);
                 			
                 		test++;
             		}else {
-            			imageO = new Image(ControleurMorpion.class.getResource("../vue/O.png").toString());
+            			imageO = new Image(ControleurMorpion.class.getResource("/vue/icone_cercle.png").toString());
                 		img.setImage(imageO);
                 		((InterfaceMorpion)obj).PlacerO(numCase);
                 		

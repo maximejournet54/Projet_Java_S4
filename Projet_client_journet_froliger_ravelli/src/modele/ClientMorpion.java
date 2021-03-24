@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -31,6 +32,7 @@ public class ClientMorpion{
 	                Node root = fxmlLoader.load();
 	                Scene scene = new Scene( (Parent) root, 700, 480);
 
+	                stage.getIcons().add(new Image("/vue/icone_morpion.jpg"));
 	                stage.setScene(scene);
 	                stage.setTitle("Jeu du Morpion");
 	                stage.setResizable(false);

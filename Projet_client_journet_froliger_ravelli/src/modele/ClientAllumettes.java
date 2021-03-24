@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -23,6 +24,7 @@ public class ClientAllumettes {
 
                 stage.setScene(scene);
                 stage.setTitle("Jeu des Allumettes");
+                stage.getIcons().add(new Image("/vue/icone_allumettes.jpg"));
                 stage.setResizable(false);
                 stage.show();
             } catch(Exception e) {

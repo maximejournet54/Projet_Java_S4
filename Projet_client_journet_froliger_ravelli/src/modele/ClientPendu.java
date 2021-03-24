@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -19,9 +20,10 @@ public class ClientPendu {
                 URL fxmlURL= ClientPendu.class.getResource("/vue/Pendu.fxml");
                 FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
                 Node root = fxmlLoader.load();
-                Scene scene = new Scene( (Parent) root, 900, 700);
+                Scene scene = new Scene( (Parent) root, 600, 400);
 
                 stage.setScene(scene);
+                stage.getIcons().add(new Image("/vue/icone_pendu.jpg"));
                 stage.setTitle("Jeu du Pendu");
                 stage.setResizable(false);
                 stage.show();

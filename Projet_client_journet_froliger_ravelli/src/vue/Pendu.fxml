@@ -15,51 +15,51 @@
 
 <BorderPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#init" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #525252;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurPendu">
    <top>
-      <MenuBar fx:id="menu" style="-fx-background-color: #666666;" BorderPane.alignment="CENTER">
+      <MenuBar fx:id="menu" style="-fx-background-color: #7cacf9;" BorderPane.alignment="CENTER">
         <menus>
-          <Menu fx:id="menufi" mnemonicParsing="false" text="Fichier">
+          <Menu fx:id="menufi" mnemonicParsing="false" style="-fx-background-color: #7cacf9;" text="Fichier">
                <items>
-                  <MenuItem fx:id="menuRej" mnemonicParsing="false" onAction="#menuClic" style="-fx-background-color: #666666;" text="Rejouer" />
-                  <MenuItem fx:id="menuQuitter" mnemonicParsing="false" onAction="#menuClic" style="-fx-background-color: #666666;" text="Quitter" />
+                  <MenuItem fx:id="menuRej" mnemonicParsing="false" onAction="#menuClic" style="-fx-background-color: #7cacf9;" text="Rejouer" />
+                  <MenuItem fx:id="menuQuitter" mnemonicParsing="false" onAction="#menuClic" style="-fx-background-color: #7cacf9;" text="Quitter" />
                </items>
           </Menu>
         </menus>
       </MenuBar>
    </top>
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #7cacd6;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="z" layoutX="225.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="Z" textFill="#1530b7" />
-            <Button fx:id="y" layoutX="193.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="Y" textFill="#1530b7" />
-            <Button fx:id="d" layoutX="158.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="D" textFill="#1530b7" />
-            <Button fx:id="c" layoutX="124.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="C" textFill="#1530b7" />
-            <Button fx:id="i" layoutX="89.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: #666666;" text="I" textFill="#1530b7" />
-            <Button fx:id="j" layoutX="122.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #666666;" text="J" textFill="#1530b7" />
-            <Button fx:id="b" layoutX="88.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="B" textFill="#1530b7" />
-            <Button fx:id="a" layoutX="51.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="A" textFill="#1530b7" />
-            <Button layoutX="158.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="X" textFill="#1530b7" fx:id="x" />
-            <Button fx:id="w" layoutX="122.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="W" textFill="#1530b7" />
-            <Button fx:id="v" layoutX="90.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="V" textFill="#1530b7" />
-            <Button fx:id="u" layoutX="260.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="U" textFill="#1530b7" />
-            <Button fx:id="h" layoutX="51.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="H" textFill="#1530b7" />
-            <Button fx:id="g" layoutX="260.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="G" textFill="#1530b7" />
-            <Button fx:id="f" layoutX="225.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="F" textFill="#1530b7" />
-            <Button fx:id="e" layoutX="194.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="E" textFill="#1530b7" />
-            <Button fx:id="t" layoutX="224.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #666666;" text="T" textFill="#1530b7" />
-            <Button fx:id="s" layoutX="159.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="S" textFill="#1530b7" />
-            <Button fx:id="r" layoutX="193.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="R" textFill="#1530b7" />
-            <Button fx:id="q" layoutX="121.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="Q" textFill="#1530b7" />
-            <Button fx:id="p" layoutX="90.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="P" textFill="#1530b7" />
-            <Button fx:id="o" layoutX="50.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="O" textFill="#1530b7" />
-            <Button fx:id="l" layoutX="195.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="L" textFill="#1530b7" />
-            <Button fx:id="n" layoutX="260.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="N" textFill="#1530b7" />
-            <Button fx:id="m" layoutX="223.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="M" textFill="#1530b7" />
-            <Button fx:id="k" layoutX="159.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" style="-fx-background-color: #666666;" text="K" textFill="#1530b7" />
-            <Label fx:id="lblTitre" layoutX="25.0" layoutY="22.0" prefHeight="28.0" prefWidth="271.0" text="Bienvenue sur le  jeu du pendu!" textFill="#1530b7">
+            <Button fx:id="z" layoutX="225.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" text="Z" />
+            <Button fx:id="y" layoutX="193.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" text="Y" />
+            <Button fx:id="d" layoutX="158.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" text="D" />
+            <Button fx:id="c" layoutX="124.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" text="C" />
+            <Button fx:id="i" layoutX="89.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="24.0" prefWidth="24.0" text="I" />
+            <Button fx:id="j" layoutX="122.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="25.0" prefWidth="27.0" text="J" />
+            <Button fx:id="b" layoutX="88.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" text="B" />
+            <Button fx:id="a" layoutX="51.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" text="A" />
+            <Button layoutX="158.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" text="X" fx:id="x" />
+            <Button fx:id="w" layoutX="122.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" text="W" />
+            <Button fx:id="v" layoutX="90.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickBtn" text="V" textFill="#010207" />
+            <Button fx:id="u" layoutX="260.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" text="U" />
+            <Button fx:id="h" layoutX="51.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" text="H" />
+            <Button fx:id="g" layoutX="260.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" text="G" />
+            <Button fx:id="f" layoutX="225.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" text="F" />
+            <Button fx:id="e" layoutX="194.0" layoutY="127.0" mnemonicParsing="false" onAction="#clickBtn" text="E" />
+            <Button fx:id="t" layoutX="224.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" prefHeight="25.0" prefWidth="25.0" text="T" />
+            <Button fx:id="s" layoutX="159.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" text="S" />
+            <Button fx:id="r" layoutX="193.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" text="R" />
+            <Button fx:id="q" layoutX="121.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" text="Q" />
+            <Button fx:id="p" layoutX="90.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" text="P" />
+            <Button fx:id="o" layoutX="50.0" layoutY="196.0" mnemonicParsing="false" onAction="#clickBtn" text="O" />
+            <Button fx:id="l" layoutX="195.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" text="L" />
+            <Button fx:id="n" layoutX="260.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" text="N" />
+            <Button fx:id="m" layoutX="223.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" text="M" />
+            <Button fx:id="k" layoutX="159.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickBtn" text="K" />
+            <Label fx:id="lblTitre" layoutX="25.0" layoutY="22.0" prefHeight="28.0" prefWidth="271.0" text="Bienvenue sur le  jeu du pendu!">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <ListView fx:id="liste" layoutX="47.0" layoutY="276.0" prefHeight="68.0" prefWidth="214.0" style="-fx-background-color: #666666;" />
+            <ListView fx:id="liste" layoutX="47.0" layoutY="276.0" prefHeight="68.0" prefWidth="214.0" />
             <Label fx:id="lbl1" layoutX="90.0" layoutY="83.0" textFill="#1ad04b">
                <font>
                   <Font size="18.0" />
@@ -120,15 +120,11 @@
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <Label fx:id="joueur" layoutX="96.0" layoutY="351.0" prefHeight="20.0" prefWidth="430.0" text="Pour commencer une partie, appuyer sur une touche du clavier." textFill="#1530b7">
-               <font>
-                  <Font size="14.0" />
-               </font></Label>
          </children>
       </Pane>
    </center>
    <right>
-      <AnchorPane fx:id="AnchorPane" prefHeight="342.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="AnchorPane" prefHeight="342.0" prefWidth="292.0" style="-fx-background-color: #7cacd6;" BorderPane.alignment="CENTER">
          <children>
             <Line fx:id="l1" endX="100.0" layoutX="146.0" layoutY="295.0" startX="-100.0" visible="false" />
             <Line fx:id="l2" endX="10.0" endY="-30.0" layoutX="75.0" layoutY="100.0" startX="10.0" startY="200.0" visible="false" />
@@ -141,9 +137,14 @@
             <Line fx:id="l11" endX="100.0" layoutX="80.0" layoutY="230.0" startX="60.0" startY="40.0" visible="false" />
             <Line fx:id="l10" endX="100.0" layoutX="120.0" layoutY="270.0" startX="60.0" startY="-40.0" visible="false" />
             <Line fx:id="l4" endX="50.0" layoutX="80.0" layoutY="70.0" startX="5.0" startY="30.0" visible="false" />
-            <Label fx:id="lblErreur" layoutX="68.0" layoutY="317.0" prefHeight="27.0" prefWidth="165.0" textFill="#1530b7">
+            <Label fx:id="lblErreur" layoutX="68.0" layoutY="317.0" prefHeight="27.0" prefWidth="165.0" textFill="#0c6b1f">
                <font>
                   <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="joueur" layoutX="-215.0" layoutY="351.0" prefHeight="20.0" prefWidth="430.0" text="Pour commencer une partie, appuyer sur une touche du clavier.">
+               <font>
+                  <Font size="14.0" />
                </font>
             </Label>
          </children>
