@@ -12,8 +12,8 @@ import java.net.URL;
 import java.rmi.Naming;
 import java.rmi.Remote;
 
-public class ClientMorpion  extends Application{
-	
+public class ClientMorpion{
+	/*
 	public static void main(String[] args) {
         try {
             Remote obj = (InterfaceMorpion) Naming.lookup("rmi://localhost:8001/morpion");
@@ -42,12 +42,16 @@ public class ClientMorpion  extends Application{
         } catch(Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
 	    public static void lancerMorpion() {
 	        try {
 	            InterfaceMorpion obj = (InterfaceMorpion) Naming.lookup("rmi://localhost:8001/morpion");
 	            System.out.println("Client connecte.\nOuverture de l'application.\n");
+	            if (obj instanceof InterfaceMorpion) {
+	            	((InterfaceMorpion)obj).initGrille();
+	            	((InterfaceMorpion)obj).AfficheGrille();
+	            }
 	            try {
 	                Stage stage = new Stage();
 	                URL fxmlURL= ClientMorpion.class.getResource("/vue/Morpion.fxml");
