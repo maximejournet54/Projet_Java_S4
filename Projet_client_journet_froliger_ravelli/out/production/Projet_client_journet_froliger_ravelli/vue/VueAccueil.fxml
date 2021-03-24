@@ -18,7 +18,7 @@
                   <Menu mnemonicParsing="false" text="Jouer">
                     <items>
                       <MenuItem fx:id="menuPendu" mnemonicParsing="false" onAction="#clickMenuPendu" text="Pendu" />
-                        <MenuItem fx:id="menuMorpion" mnemonicParsing="false" text="Morpion" />
+                        <MenuItem fx:id="menuMorpion" mnemonicParsing="false" onAction="#clickMenuMorpion" text="Morpion" />
                         <MenuItem fx:id="menuAlumette" mnemonicParsing="false" text="Alumette" />
                     </items>
                   </Menu>

@@ -16,6 +16,7 @@ import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 import static modele.ClientPendu.lancerPendu;
+import static modele.ClientMorpion.lancerMorpion;
 
 public class ControleurAccueil implements InterfaceAccueil {
     @FXML private MenuItem menuPendu;
@@ -31,6 +32,11 @@ public class ControleurAccueil implements InterfaceAccueil {
         lancerPendu();
     }
 
+    @FXML
+    public void clickMenuMorpion(){
+    	lancerMorpion();
+    }
+    
     @FXML
     public void clickMenuQuitter() {
         Alert alerte = new Alert(AlertType.CONFIRMATION);

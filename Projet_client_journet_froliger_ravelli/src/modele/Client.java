@@ -28,7 +28,6 @@ public class Client extends Application{
             FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
             Node root = fxmlLoader.load();
             Scene scene = new Scene( (Parent) root, 900, 700);
-
             stage.setScene(scene);
             stage.setTitle("Accueil de l'application");
             stage.setResizable(false);
