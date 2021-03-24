@@ -84,16 +84,41 @@ public class ControleurMorpion{
             	
             }
             gagnant=((InterfaceMorpion)obj).testGagnant();
-            
-            if(gagnant==1) {
-            	System.out.println("Le joueur X a gagné");
-            }else if(gagnant==0) {
-            	System.out.println("Le joueur O a gagné");
+            if(gagnant != -1) {
+            	btn_rejouer.setVisible(true);
+	            if(gagnant==1) {
+	            	System.out.println("Le joueur X a gagné");
+	            }else if(gagnant==0) {
+	            	System.out.println("Le joueur O a gagné");
+	            }
             }
             
         } catch (Exception e) {
             e.printStackTrace();
         }
     	
+    }
+    @FXML
+    public void Rejouer(MouseEvent event){
+    	
+    	try {
+    	Remote obj = (InterfaceMorpion) Naming.lookup("rmi://localhost:8001/morpion"); 
+    	 if (obj instanceof InterfaceMorpion) {
+    		 ((InterfaceMorpion)obj).initGrille();
+    		 im1.setImage(null);
+    		 im2.setImage(null);
+    		 im3.setImage(null);
+    		 im4.setImage(null);
+    		 im5.setImage(null);
+    		 im6.setImage(null);
+    		 im7.setImage(null);
+    		 im8.setImage(null);
+    		 im9.setImage(null);
+    		 gagnant = -1;
+    		 btn_rejouer.setVisible(false);
+    	 }
+    	}catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
