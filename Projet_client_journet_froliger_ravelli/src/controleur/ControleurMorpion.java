@@ -24,8 +24,6 @@ public class ControleurMorpion{
     @FXML
     private GridPane gridPane;
     @FXML
-    private Label turnLabel;
-    @FXML
     private Label signLabel;
     @FXML
     private Label opierdoluLabel;
@@ -68,7 +66,7 @@ public class ControleurMorpion{
             			imageX = new Image(ControleurMorpion.class.getResource("../vue/X.png").toString());
                 		img.setImage(imageX);
                 		((InterfaceMorpion)obj).PlacerX(numCase);
- 
+                			
                 		test++;
             		}else {
             			imageO = new Image(ControleurMorpion.class.getResource("../vue/O.png").toString());
@@ -86,10 +84,13 @@ public class ControleurMorpion{
             gagnant=((InterfaceMorpion)obj).testGagnant();
             if(gagnant != -1) {
             	btn_rejouer.setVisible(true);
+            	signLabel.setVisible(true);
 	            if(gagnant==1) {
 	            	System.out.println("Le joueur X a gagné");
+	            	signLabel.setText("Le joueur X a gagné");
 	            }else if(gagnant==0) {
 	            	System.out.println("Le joueur O a gagné");
+	            	signLabel.setText("Le joueur O a gagné");
 	            }
             }
             
@@ -116,6 +117,8 @@ public class ControleurMorpion{
     		 im9.setImage(null);
     		 gagnant = -1;
     		 btn_rejouer.setVisible(false);
+    		 signLabel.setVisible(false);
+    		 signLabel.setText(" ");
     	 }
     	}catch (Exception e) {
             e.printStackTrace();
