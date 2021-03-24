@@ -57,7 +57,7 @@ public class ClientMorpion{
 	                URL fxmlURL= ClientMorpion.class.getResource("/vue/Morpion.fxml");
 	                FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
 	                Node root = fxmlLoader.load();
-	                Scene scene = new Scene( (Parent) root, 900, 700);
+	                Scene scene = new Scene( (Parent) root, 700, 480);
 
 	                stage.setScene(scene);
 	                stage.setTitle("Jeu du Morpion");
