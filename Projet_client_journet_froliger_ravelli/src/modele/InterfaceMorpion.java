@@ -1,8 +1,5 @@
 package modele;
 
-import javafx.event.ActionEvent;
-import java.net.MalformedURLException;
-import java.rmi.NotBoundException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

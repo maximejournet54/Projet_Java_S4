@@ -10,7 +10,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import modele.InterfaceMorpion;
 
-import java.net.URL;
 import java.rmi.Naming;
 import java.rmi.Remote;
 
@@ -25,8 +24,6 @@ public class ControleurMorpion{
     private GridPane gridPane;
     @FXML
     private Label signLabel;
-    @FXML
-    private Label opierdoluLabel;
     @FXML
     private ImageView im1;
     @FXML
@@ -55,9 +52,7 @@ public class ControleurMorpion{
     	try {
             Remote obj = (InterfaceMorpion) Naming.lookup("rmi://localhost:8001/morpion"); 
             ImageView img = (ImageView) event.getSource();
-           // System.out.println(event.getSource().toString());
             int numCase = (Integer.parseInt(event.getSource().toString().substring(15, 16)))-1;
-           // System.out.println(numCase);
         	Image temp = img.getImage();
             
             if (obj instanceof InterfaceMorpion) {
