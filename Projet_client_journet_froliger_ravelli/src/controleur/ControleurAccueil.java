@@ -29,22 +29,22 @@ public class ControleurAccueil implements InterfaceAccueil {
     // actions au clic sur le jeu du pendu dans l'accueil
 
     @FXML
-    public void clickMenuPendu() {
+    public void cliquerPendu() {
         lancerPendu();
     }
 
     @FXML
-    public void clickMenuMorpion(){
+    public void cliquerMorpion(){
     	lancerMorpion();
     }
     
     @FXML
-    public void clickMenuAlumettes(){
+    public void cliquerAllu(){
     	lancerAllumettes();
     }
     
     @FXML
-    public void clickMenuQuitter() {
+    public void cliquerQuitter() {
         Alert alerte = new Alert(AlertType.CONFIRMATION);
         alerte.setTitle("Attention!");
         alerte.setHeaderText("Attention, vous allez fermer l'application");
@@ -59,7 +59,7 @@ public class ControleurAccueil implements InterfaceAccueil {
     }
 
     @FXML
-    public void clickMenuAide() {
+    public void cliquerAide() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/Aide.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();

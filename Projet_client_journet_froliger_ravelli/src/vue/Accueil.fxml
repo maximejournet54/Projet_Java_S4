@@ -1,51 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="900.0" style="-fx-background-color: #7cacd6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurAccueil">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="980.0" style="-fx-background-color: #7cacd6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurAccueil">
    <children>
-      <VBox layoutY="-1.0" prefHeight="556.0" prefWidth="900.0">
+      <VBox layoutY="-1.0" prefHeight="564.0" prefWidth="983.0">
          <children>
-            <MenuBar style="-fx-background-color: #7cacf9;">
-              <menus>
-                  <Menu mnemonicParsing="false" text="Jouer">
-                    <items>
-                      <MenuItem fx:id="menuPendu" mnemonicParsing="false" onAction="#clickMenuPendu" text="Pendu" />
-                        <MenuItem fx:id="menuMorpion" mnemonicParsing="false" onAction="#clickMenuMorpion" text="Morpion" />
-                        <MenuItem fx:id="menuAlumette" mnemonicParsing="false" onAction="#clickMenuAlumettes" text="Alumette" />
-                    </items>
-                  </Menu>
-                <Menu mnemonicParsing="false" text="Quitter">
-                     <items>
-                        <MenuItem fx:id="menuQuitter" mnemonicParsing="false" onAction="#clickMenuQuitter" text="Quitter l'application" />
-                     </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Aide">
-                  <items>
-                    <MenuItem fx:id="menuInfo" mnemonicParsing="false" onAction="#clickMenuAide" text="Informations" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <Pane prefHeight="539.0" prefWidth="983.0" style="-fx-background-color: #7cacd6;">
+            <Pane prefHeight="532.0" prefWidth="877.0">
                <children>
-                  <Label fx:id="lbl1" alignment="CENTER" contentDisplay="TOP" layoutX="137.0" layoutY="56.0" prefHeight="136.0" prefWidth="622.0" text="Bienvenue dans l'application de jeux." textFill="#000000f7">
+                  <Label fx:id="lbl1" alignment="CENTER" contentDisplay="TOP" layoutX="189.0" layoutY="58.0" prefHeight="136.0" prefWidth="622.0" text="Bienvenue dans l'application de jeux." textFill="#1530b7f7">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lbl2" alignment="CENTER" layoutX="47.0" layoutY="205.0" prefHeight="263.0" prefWidth="877.0" text="Pour accéder à un jeu, utilisez la barre de menu." textAlignment="CENTER" textFill="#000000f7">
+                  <Label fx:id="lbl2" alignment="CENTER" layoutX="137.0" layoutY="102.0" prefHeight="155.0" prefWidth="726.0" text="Pour accéder à un jeu, cliquez sur l'un des choix suivants :" textAlignment="CENTER" textFill="#1530b7f7">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
+                  <Button fx:id="btn_pendu" layoutX="95.0" layoutY="285.0" mnemonicParsing="false" onAction="#cliquerPendu" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #0761b0; -fx-border-color: black; -fx-border-radius: 3; -fx-border-style: dotted;" text="Pendu" textFill="#34bbe3">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_morpion" layoutX="712.0" layoutY="285.0" mnemonicParsing="false" onAction="#cliquerMorpion" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #0761b0; -fx-border-color: black; -fx-border-radius: 3; -fx-border-style: dotted;" text="Morpion" textFill="#34bbe3">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_allu" layoutX="423.0" layoutY="285.0" mnemonicParsing="false" onAction="#cliquerAllu" prefHeight="75.0" prefWidth="154.0" style="-fx-background-color: #0761b0; -fx-border-color: black; -fx-border-radius: 3; -fx-border-style: dotted;" text="Allumettes" textFill="#34bbe3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_aide" layoutX="866.0" layoutY="413.0" mnemonicParsing="false" onAction="#cliquerAide" prefHeight="32.0" prefWidth="77.0" style="-fx-background-color: #0761b0; -fx-border-color: black; -fx-border-radius: 3; -fx-border-style: dotted;" text="Aide" textFill="#34bbe3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_quitter" layoutX="866.0" layoutY="472.0" mnemonicParsing="false" onAction="#cliquerQuitter" prefHeight="32.0" prefWidth="77.0" style="-fx-background-color: #0761b0; -fx-border-color: black; -fx-border-radius: 3; -fx-border-style: dotted;" text="Quitter" textFill="#34bbe3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
          </children>

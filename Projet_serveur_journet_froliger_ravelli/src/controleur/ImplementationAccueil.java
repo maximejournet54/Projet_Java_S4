@@ -16,17 +16,27 @@ public class ImplementationAccueil extends UnicastRemoteObject implements Interf
     }
 
     @Override
-    public void clickMenuAide() throws RemoteException {
+    public void cliquerAide() throws RemoteException {
 
     }
 
     @Override
-    public void clickMenuQuitter() throws RemoteException {
+    public void cliquerQuitter() throws RemoteException {
 
     }
 
     @Override
-    public void clickMenuPendu() throws RemoteException {
+    public void cliquerPendu() throws RemoteException {
+
+    }
+    
+    @Override
+    public void cliquerAllu() throws RemoteException {
+
+    }
+    
+    @Override
+    public void cliquerMorpion() throws RemoteException {
 
     }
 }

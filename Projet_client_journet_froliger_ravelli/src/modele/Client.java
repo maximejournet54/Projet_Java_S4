@@ -28,7 +28,7 @@ public class Client extends Application{
             URL fxmlURL=getClass().getResource("/vue/Accueil.fxml");
             FXMLLoader fxmlLoader = new FXMLLoader(fxmlURL);
             Node root = fxmlLoader.load();
-            Scene scene = new Scene( (Parent) root, 900, 700);
+            Scene scene = new Scene( (Parent) root, 980, 550);
             stage.getIcons().add(new Image("/vue/icone_accueil.jpg"));
             stage.setScene(scene);
             stage.setTitle("Accueil de l'application");
