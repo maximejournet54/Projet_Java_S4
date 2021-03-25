@@ -83,9 +83,27 @@ public class ControleurMorpion{
 	            if(gagnant==1) {
 	            	System.out.println("Le joueur X a gagné");
 	            	signLabel.setText("Le joueur X a gagné");
+	            	im1.setDisable(true);
+	            	im2.setDisable(true);
+	            	im3.setDisable(true);
+	            	im4.setDisable(true);
+	            	im5.setDisable(true);
+	            	im6.setDisable(true);
+	            	im7.setDisable(true);
+	            	im8.setDisable(true);
+	            	im9.setDisable(true);
 	            }else if(gagnant==0) {
 	            	System.out.println("Le joueur O a gagné");
 	            	signLabel.setText("Le joueur O a gagné");
+	            	im1.setDisable(true);
+	            	im2.setDisable(true);
+	            	im3.setDisable(true);
+	            	im4.setDisable(true);
+	            	im5.setDisable(true);
+	            	im6.setDisable(true);
+	            	im7.setDisable(true);
+	            	im8.setDisable(true);
+	            	im9.setDisable(true);
 	            }
             }
             
@@ -110,6 +128,15 @@ public class ControleurMorpion{
     		 im7.setImage(null);
     		 im8.setImage(null);
     		 im9.setImage(null);
+    		 im1.setDisable(false);
+         	im2.setDisable(false);
+         	im3.setDisable(false);
+         	im4.setDisable(false);
+         	im5.setDisable(false);
+         	im6.setDisable(false);
+         	im7.setDisable(false);
+         	im8.setDisable(false);
+         	im9.setDisable(false);
     		 gagnant = -1;
     		 btn_rejouer.setVisible(false);
     		 signLabel.setVisible(false);
